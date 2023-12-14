@@ -52,9 +52,6 @@ impl<T: Display + PartialOrd> Pair<T> {
 }
 
 impl Summary for Tweet {
-    // fn summary(&self) -> String {
-    //     format!("{}: {}", self.username, self.content)
-    // }
     fn summarize_author(&self) -> String {
         format!("@{}", self.username)
     }
@@ -63,10 +60,4 @@ impl Summary for Tweet {
 #[cfg(test)]
 mod tests {
     use super::*;
-
-    // #[test]
-    // fn it_works() {
-    //     let result = add(2, 2);
-    //     assert_eq!(result, 4);
-    // }
 }
